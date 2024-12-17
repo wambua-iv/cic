@@ -1,0 +1,58 @@
+esxcli system settings encryption recovery list
+Recovery ID                             Key
+--------------------------------------  ---
+{DE2C2619-7B29-4D2C-9A51-B373AA79B7AF}  219406-542323-147391-466282-146557-212239-677947-593457-670623-553815-716187-419958-697742-161933-128351-350464
+
+
+=============================================================================
+
+
+20:07:d0:39:ea:27:fa:27 ------ 28
+
+SERVER
+10:00:b4:7a:f1:d5:7d:df      vmhba 65
+
+
+
+
+
+
+zone name CIC-ESX24-FIA vsan 311
+member pwwn 10:00:b4:7a:f1:d5:7d:df
+member pwwn 20:10:d0:39:ea:27:fa:27
+member pwwn 20:08:d0:39:ea:27:fa:27
+member pwwn 20:06:d0:39:ea:27:fa:27
+member pwwn 20:07:d0:39:ea:27:fa:27
+
+zoneset name ucs-CIC-FI-vsan-311-zoneset vsan 311
+member CIC-ESX24-FIA
+
+
+zoneset activate ucs-CIC-FI-vsan-311-zoneset vsan 311
+
+
+FI -B
+10
+STORAGE
+20:04:d0:39:ea:27:fa:27 ------ 24
+
+20:01:d0:39:ea:27:fa:27 ------ 26
+
+20:0f:d0:39:ea:27:fa:27 ------ 27
+
+SERVER
+10:00:b4:7a:f1:d5:7d:bb     vmhba67
+
+zone name C vsan 312
+member pwwn 10:00:b4:7a:f1:d5:7d:bb
+member pwwn 20:04:d0:39:ea:27:fa:27
+member pwwn 20:01:d0:39:ea:27:fa:27
+member pwwn 20:0f:d0:39:ea:27:fa:27 
+
+zoneset name ucs-CIC-FI-vsan-312-zoneset vsan 312
+member CIC-ESX24-FIB
+
+zoneset activate ucs-CIC-FI-vsan-312-zoneset vsan 312
+
+
+SAN-CON-PLCY-B
